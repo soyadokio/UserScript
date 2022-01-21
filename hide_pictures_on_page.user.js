@@ -1,18 +1,9 @@
 // ==UserScript==
-// @namespace         https://github.com/SoyaDokio/hide-pictures-on-page
-
 // @name              一键隐藏图片
-// @name:zh           一键隐藏图片
-// @name:en           hide pictures on page
-
-// @description       摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
-// @description:zh    摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
-// @description:en    hide all pictures on page by clicking
-
-// @version           0.3.1
+// @version           0.3.3
 // @author            SoyaDokio
-// @license           LGPLv3
-// @supportURL        https://github.com/SoyaDokio/hide-pictures-on-page/issues
+// @icon
+// @description       摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
 
 // @match             *://*/*
 
@@ -21,7 +12,13 @@
 // @grant             GM_setValue
 
 // @require           https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
+
 // @run-at            document-start
+
+// @license           MIT
+// @namespace         https://greasyfork.org/scripts/420682
+// @supportURL        https://github.com/sdokio/UserScript
+// @homepageURL       https://github.com/sdokio/UserScript
 // ==/UserScript==
 
 (function() {
