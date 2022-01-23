@@ -13,8 +13,6 @@
 // @grant           GM_setValue
 // @grant           GM_xmlhttpRequest
 
-// @require         https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
-
 // @run-at          document-idle
 
 // @license         MIT
