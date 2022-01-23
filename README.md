@@ -7,7 +7,7 @@
 
 太长不看版：**油猴是浏览器的插件，脚本算是油猴的插件**。
 
-<details><summary>展开详细了解</summary>
+<details><summary>展开查看详细描述</summary>
 
 ### 油猴是什么
 
@@ -65,21 +65,19 @@
 
 也可以在[这里](https://pan.lanzouo.com/b073l8d1e)自行下载后，以 `离线安装` 的方式安装。
 
-> 不会离线安装 .crx 扩展？请参考 @XIU2 大佬的文章： _[Chrome、Edge 重新开启隐藏的 [拖入安装 .crx 扩展] 功能！全版本！](https://zhuanlan.zhihu.com/p/276027099)_
+_注：不会离线安装 .crx 扩展？请参考 @XIU2 大佬的文章： [Chrome、Edge 重新开启隐藏的 [拖入安装 .crx 扩展] 功能！全版本！](https://zhuanlan.zhihu.com/p/276027099)_
 
 ### 2. 安装脚本
 
-在下方[脚本列表](#脚本列表)找到需要的脚本，选择需要的脚本，点击右侧 `脚本主页` 或 `备用安装` 进入 GreasyFork 网站上该脚本的主页，点击 `安装此脚本` 后进入脚本安装页面，再点击 `安装` 即可。
+在下方[脚本列表](#脚本列表)找到需要的脚本，根据功能说明选择需要的脚本，点击右侧 `安装` 或 `备用` 进入脚本安装页面，再点击 `安装` 即可。也可点击脚本名称进入 GreasyFork 网站上的该脚本主页深入了解详细的脚本介绍、使用说明、注意事项等后再做决定。
 
 
 ## 脚本列表
 
 | 名称 | 功能 | 链接 |
 | :---- | :---- | :----: |
-| <img src="https://github.com/sdokio/UserScript/assets/images/hide_pictures_on_page.jpg" width="16px" height="16px" /> 一键隐藏图片 | 一键隐藏网页所有图片，安全摸鱼... | [脚本主页](https://greasyfork.org/scripts/420682) \| [备用安装](https://cdn.jsdelivr.net/gh/sdokio/UserScript/hide_pictures_on_page.user.js) |
-| <img src="https://github.com/sdokio/UserScript/assets/images/xinshangmeng.ico" width="16px" height="16px" /> 中烟新商盟小助手 | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [脚本主页](https://greasyfork.org/scripts/xxxxxx) \| [备用安装](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
-
-_注：详细的脚本介绍、使用说明、注意事项等，请点击 `脚本主页` 前往 GreasyFork 网站上该脚本的主页查看_
+| [<img src="https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/hide_pictures_on_page.jpg" width="16px" height="16px" /> 一键隐藏图片](https://greasyfork.org/scripts/420682) | 一键隐藏网页所有图片，安全摸鱼... | [安装](https://greasyfork.org/scripts/420682/code/hide_pictures_on_page.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/hide_pictures_on_page.user.js) |
+| [<img src="https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/xinshangmeng.ico" width="16px" height="16px" /> 中烟新商盟小助手](https://greasyfork.org/scripts/439021) | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
 
 _注：使用 `备用安装` 的脚本可能存在24小时以内的更新延迟_
 

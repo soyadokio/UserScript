@@ -1,73 +1,144 @@
 // ==UserScript==
-// @name              中烟新商盟小助手
-// @version           0.0.1
-// @author            SoyaDokio
-// @icon              http://hb.xinshangmeng.com:82/favicon.ico
-// @description       摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
+// @name            中烟新商盟小助手
+// @version         0.0.1
+// @author          SoyaDokio
+// @icon            https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/xinshangmeng.ico
+// @description     中烟新商盟订烟时删除所有订购量为0的行
 
-// @match             *://*.xinshangmeng.com/*
+// @match           *://*.xinshangmeng.com/eciop/orderForCC/cgtListForCC.htm*
+// @match           *://*.xinshangmeng.com/eciop/orderForCC/cgtCartForCC.htm*
 
-// @grant             GM_addStyle
-// @grant             GM_getValue
-// @grant             GM_setValue
+// @grant           GM_addStyle
+// @grant           GM_getValue
+// @grant           GM_setValue
+// @grant           GM_xmlhttpRequest
 
-// @run-at            document-end
+// @require         https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
 
-// @license           MIT
-// @namespace         https://greasyfork.org/scripts/xxxxxx
-// @supportURL        https://github.com/sdokio/UserScript
-// @namespace         https://github.com/sdokio/UserScript
+// @run-at          document-idle
+
+// @license         MIT
+// @namespace       https://greasyfork.org/scripts/439021
+// @supportURL      https://github.com/sdokio/UserScript
+// @namespace       https://github.com/sdokio/UserScript
 // ==/UserScript==
 
 (function() {
     "use strict";
 
-    run();
+    main();
 
-    function run() {
+    function main() {
         if (document.location.host.indexOf('xinshangmeng.com') > -1) {
             if (document.location.pathname === '/eciop/orderForCC/cgtListForCC.htm') {
-                appendButtons();
+                var cgtCode = '6901028180580';// 蓝楼
+                getCgtLmt(cgtCode);
+                // 暂时不可用，原因仍需调查
+                // appendButtonSetAllReq();
+            } else if (document.location.pathname === '/eciop/orderForCC/cgtCartForCC.htm') {
+                appendButtonRemoveAll();
             }
         }
     }
 
-    // 添加按钮
-    function appendButtons() {
-        // 先添加的按钮靠左
-        appendButtonSetAllReq();
-        appendButtonRemoveAll();
+    // 获取指定商品的可用量
+    function getCgtLmt(cgtCode) {
+        GM_xmlhttpRequest({
+            url: getlink + 'order/cgtCo.do',
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            data: 'method=getBusiCgtLmt'
+                    + '&orgCode=' + porgCode
+                    + '&custCode=' + pcustCode
+                    + '&cgtCode=' + cgtCode
+                    + '&orderId=' + document.querySelector('#coNum').value
+                    + '&orderDate=' + porderDate
+                    + '&zone=' + porgCode
+                    + '&v=' + new Date().getTime()
+                    + '&_view=async',
+            onload: function(data) {
+                console.log(data.responseText);
+                var cgtLmt = JSON.parse(data.responseText)[0].QTY_LMT;
+                var cgtReq = Math.ceil(cgtLmt * 1.5);
+                console.log('cgtReq=' + cgtReq);
+                setOrdQty(cgtCode, 55, !1, cgtReq);
+            }
+        });
     }
 
-    // 添加按钮：一键全订1.5倍可用量（限收收藏）
+    // 收藏指定商品
+    function addFav() {
+        var inXml = "";
+        inXml = '<xsm><fav_info org_code="' + orgCode + '" cust_code="' + custCode + '">',
+        inXml = inXml + '<cgt cgt_code="' + cgtCode + '" cgt_name="' + cgtName + '" qty="1" seq="999" note=""></cgt>',
+        inXml += "</fav_info></xsm>",
+        inXml = encodeURI(inXml);
+
+        GM_xmlhttpRequest({
+            url: getlink + 'order/cgtCo.do'
+                    + 'method=addFav'
+                    + '&zone=' + porgCode
+                    + '&v=' + new Date().getTime()
+                    + '&_view=async',
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            data: {inXml: inXml},
+            onload: function(data) {
+                console.log(data.responseText);
+                var cgtLmt = JSON.parse(data.responseText)[0].QTY_LMT;
+                var cgtReq = Math.ceil(cgtLmt * 1.5);
+                console.log('cgtReq=' + cgtReq);
+                setOrdQty(cgtCode, 55, !1, cgtReq);
+            }
+        });
+    }
+
+    // 添加按钮：【一键订满】
     function appendButtonSetAllReq() {
+        // 判断是否为目标页面
+        if (document.location.pathname.indexOf('/cgtListForCC.htm') == -1) {
+            return;
+        }
         // 获取加入购物车按钮
-        let smt = document.querySelector('#smt');
+        var smt = document.querySelector('#smt');
         if (!smt) return;
-        let eleParent = smt.parentElement;
+        var eleParent = smt.parentElement;
         if (!eleParent) return;
-        // 添加一键全订按钮
-        let btnSetAllReq = document.createElement('input');
-        btnSetAllReq.class = 'xsm-order-check-box-input';
+        // 添加一键订满按钮
+        var btnSetAllReq = document.createElement('input');
+        btnSetAllReq.className = 'xsm-order-check-box-input m110';
         btnSetAllReq.type = 'button';
-        btnSetAllReq.value = '一键全订';
-        btnSetAllReq.onclick = setAllReqWithThreeSecondTimesOfKyl();
-        eleParent.insertBefore(btnSetAllReq, eleParent.firstChild);
+        btnSetAllReq.value = '一键订满';
+        btnSetAllReq.style += ';font-size: 18px;margin-right: 10px;';
+        btnSetAllReq.addEventListener('click', setAllReqWithThreeSecondTimesOfKyl);
+        eleParent.appendChild(btnSetAllReq);
     }
 
-    // 添加按钮：一键全删订购量为0商品
+    // 添加按钮：【没货全删】
     function appendButtonRemoveAll() {
-        // 获取加入购物车按钮
-        let smt = document.querySelector('#smt');
-        if (!smt) return;
+        // 判断是否为目标页面
+        if (document.location.pathname.indexOf('/cgtCartForCC.htm') == -1) {
+            return;
+        }
+        // 获取继续购物按钮
+        var addbtn = document.querySelector('#addbtn');
+        if (!addbtn) return;
+        var eleParent = addbtn.parentElement;
+        if (!eleParent) return;
         // 添加一键全删按钮
-        let _html = '<input class="xsm-order-check-box-input" type="button" value="一键全删" onclick="removeAllWithKylZero()">';
-        smt.insertAdjacentHTML('beforebegin', _html);
+        var btnRemoveAll = document.createElement('input');
+        btnRemoveAll.className = 'xsm-order-check-box-input m110';
+        btnRemoveAll.type = 'button';
+        btnRemoveAll.value = '一键全删';
+        btnRemoveAll.style += ';font-size: 18px;';
+        btnRemoveAll.addEventListener('click', removeAllWithKylZero);
+        eleParent.appendChild(btnRemoveAll);
     }
 
     // 一键全订1.5倍可用量（限收收藏）
     function setAllReqWithThreeSecondTimesOfKyl() {
-        let times = 1.5;
+        console.log('function BIND testing');
+        var times = 1.5;
         setAllReqWithSpecificTimesOfKyl(times);
     }
 
@@ -76,30 +147,30 @@
     //     商品1的可用量为5时，将订购量设为5x[指定倍数]
     function setAllReqWithSpecificTimesOfKyl(times) {
         // 若尚未勾选“仅显示收藏”则勾选它
-        let chkIsFav = document.querySelector('#isFav');
+        var chkIsFav = document.querySelector('#isFav');
         if (chkIsFav && !chkIsFav.checked) {
             chkIsFav.click();
         }
         // 把每行需求量的“+”号都点一下
-        let rows = document.querySelector('#newul').querySelectorAll('li');// 每个商品是一行
-        for (let row of rows) {
-            let reqQty = row.querySelector('.cgt-col-req-qty');// 可编辑的需求量
+        var rows = document.querySelector('#newul').querySelectorAll('li');// 每个商品是一行
+        for (var row of rows) {
+            var reqQty = row.querySelector('.cgt-col-req-qty');// 可编辑的需求量
             if (reqQty.style.display != 'none') {
                 reqQty.querySelector('.adda').click();
             }
         }
         // 随便点一下好让最后一个输入框失焦
-        rows.click();// 这行似乎无效，且当总行数只有1行时下面代码会失效
+        // rows.click();// 这行似乎无效，且当商品总行数只有1行时下面代码会失效
         // 把每行的订购量都设定为该行可用量的指定倍数
-        for (let row of rows) {
-            let qtlLmt = row.querySelector('.cgt-col-qtl-lmt');// 可用量
+        for (var row of rows) {
+            var qtlLmt = row.querySelector('.cgt-col-qtl-lmt');// 可用量
             qtlLmt = parseInt(qtlLmt.innerText.trim());
-            let req = 1;
+            var req = 1;
             if (qtlLmt > 0) {
                 req = Math.ceil(qtlLmt * times);
             }
             if (req > 1) {
-                let ordQty = row.querySelector('.cgt-col-ord-qty');// 可编辑的订购量
+                var ordQty = row.querySelector('.cgt-col-ord-qty');// 可编辑的订购量
                 ordQty.querySelector('input[name="ord_qty"]').value = req;
             }
         }
@@ -107,7 +178,7 @@
 
     // 一键全删订购量为0商品
     function removeAllWithKylZero() {
-        let ord = '0';
+        var ord = '0';
         removeAllWithKyl(ord);
     }
 
@@ -124,21 +195,23 @@
             }
         }
         // 隐藏黑色半透明背景
-        setTimeout(function() {
-            var bgs = document.body.getElementsByTagName('div');
-            for (var bg of bgs) {
-                if (bg.style.zIndex == '9999' && bg.style.opacity == '0.3') {
-                    bg.style.display = 'none';
-                }
+        var _interval1 = setInterval(function() {
+            var eleLastChild = document.body.lastChild;
+            if (eleLastChild.tagName === 'DIV' && eleLastChild.style.zIndex === '9999') {
+                eleLastChild.remove();
             }
-        }, 100);
+        }, 50);
         // 隐藏弹窗
-        setTimeout(function() {
-            var divs = document.getElementsByClassName('ui_msg');
-            for (div of divs) {
-                div.parentNode.style.display = 'none';
+        var _interval2 = setInterval(function() {
+            var eleDivs = document.getElementsByClassName('ui_success');
+            for (var eleDiv of eleDivs) {
+                eleDiv.remove();
             }
-        }, 700);
+        }, 50);
+        setTimeout(function() {
+            clearInterval(_interval1);
+            clearInterval(_interval2);
+        }, 3000);
     }
 
 })();

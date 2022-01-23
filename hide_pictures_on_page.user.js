@@ -1,24 +1,24 @@
 // ==UserScript==
-// @name              一键隐藏图片
-// @version           0.3.3
-// @author            SoyaDokio
-// @icon
-// @description       摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
+// @name            一键隐藏图片
+// @version         0.3.3
+// @author          SoyaDokio
+// @icon            https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/hide_pictures_on_page.jpg
+// @description     摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
 
-// @match             *://*/*
+// @match           *://*/*
 
-// @grant             GM_addStyle
-// @grant             GM_getValue
-// @grant             GM_setValue
+// @grant           GM_addStyle
+// @grant           GM_getValue
+// @grant           GM_setValue
 
-// @require           https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
+// @require         https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
 
-// @run-at            document-start
+// @run-at          document-start
 
-// @license           MIT
-// @namespace         https://greasyfork.org/scripts/420682
-// @supportURL        https://github.com/sdokio/UserScript
-// @homepageURL       https://github.com/sdokio/UserScript
+// @license         MIT
+// @namespace       https://greasyfork.org/scripts/420682
+// @supportURL      https://github.com/sdokio/UserScript
+// @homepageURL     https://github.com/sdokio/UserScript
 // ==/UserScript==
 
 (function() {
@@ -207,7 +207,7 @@
 
             var move = function(event) {
                 node.style.left = event.clientX - dispX + "px" ;
-                node.style.top  = event.clientY - dispY + "px" ;
+                node.style.top = event.clientY - dispY + "px" ;
             }
 
             document.addEventListener("mousemove", move);
@@ -225,7 +225,7 @@
                     hpop_userData.position.left = "auto";
                     hpop_userData.position.right = "0";
                 } else {
-                    node.style.left = hpop_userData.position.left =  0;
+                    node.style.left = hpop_userData.position.left = 0;
                     node.style.right = hpop_userData.position.right = "auto";
                     node.classList.add("hpop-panel-left");
                     node.classList.remove("hpop-panel-right");
