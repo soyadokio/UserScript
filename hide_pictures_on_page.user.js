@@ -1,24 +1,27 @@
 // ==UserScript==
 // @name            一键隐藏图片
+// @namespace       https://github.com/sdokio
 // @version         0.3.3
 // @author          SoyaDokio
-// @icon            https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/hide_pictures_on_page.jpg
 // @description     摸鱼时页面显示与工作不相关的图片未免有些明目张胆，这时候就需要一键隐藏全图了。
+// @homepage        https://github.com/sdokio/UserScript
+// @icon            https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/hide_pictures_on_page.jpg
+// @supportURL      https://github.com/sdokio/UserScript/issues/new/choose
+// @license         MIT
 
 // @match           *://*/*
+// @require         https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
+// @run-at          document-start
 
 // @grant           GM_addStyle
 // @grant           GM_getValue
 // @grant           GM_setValue
 
-// @require         https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
-
-// @run-at          document-start
-
-// @license         MIT
-// @namespace       https://greasyfork.org/scripts/420682
-// @supportURL      https://github.com/sdokio/UserScript
-// @homepageURL     https://github.com/sdokio/UserScript
+// @note            2022/01/24 0.3.3 新功能：记忆特定网站习惯（如在www.baidu.com隐藏了图片，关闭浏览器下次再进入仍是默认隐藏。如需再次显示需要自行设置为显示）
+// @note            2021/01/29 0.3.2 添加logo
+// @note            2021/01/29 0.3.1 新功能：拖拽控制面板；控制面板位置记忆
+// @note            2021/01/27 0.2.1 修复复选框点击无效问题；添加动图使用说明
+// @note            2021/01/26 0.1   初版发布
 // ==/UserScript==
 
 (function () {

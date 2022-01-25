@@ -1,24 +1,24 @@
 // ==UserScript==
 // @name            中烟新商盟小助手
+// @namespace       https://github.com/sdokio
 // @version         0.0.1
 // @author          SoyaDokio
-// @icon            https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/xinshangmeng.ico
 // @description     中烟新商盟订烟时删除所有订购量为0的行
+// @homepage        https://github.com/sdokio/UserScript
+// @icon            https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/xinshangmeng.ico
+// @supportURL      https://github.com/sdokio/UserScript/issues/new/choose
+// @license         MIT
 
 // @match           *://*.xinshangmeng.com/eciop/orderForCC/cgtListForCC.htm*
 // @match           *://*.xinshangmeng.com/eciop/orderForCC/cgtCartForCC.htm*
+// @run-at          document-idle
 
 // @grant           GM_addStyle
 // @grant           GM_getValue
 // @grant           GM_setValue
 // @grant           GM_xmlhttpRequest
 
-// @run-at          document-idle
-
-// @license         MIT
-// @namespace       https://greasyfork.org/scripts/439021
-// @supportURL      https://github.com/sdokio/UserScript
-// @namespace       https://github.com/sdokio/UserScript
+// @note            2022/01/23 0.1.1 初版发布
 // ==/UserScript==
 
 (function() {
