@@ -1,20 +1,20 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
+name: 建议功能 (Feature request)
+about: 你有什么好主意/新点子，或者有什么优化/建议
+title: '[脚本名称] 希望添加 XX 功能'
+labels: '功能建议'
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**你发起功能建议是否因为遇到了某个功能痛点？请描述一下**
+简单明了地描述一下痛点是什么。如：每当...的时候，用得很不舒服/不爽/难受。
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**请描述下你想要它怎样解决**
+简单明了地描述一下你想要它变成啥样儿。
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**如果你考虑过替代方案，请描述一下**
+简单明了地描述一下你考虑过的替代方案，或替代功能。
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**附加信息**
+如果还有任何关于这次功能建议的文字描述或图片，都可以加在这里。

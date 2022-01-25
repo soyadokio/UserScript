@@ -1,38 +1,33 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+name: 反馈问题 (Bug report)
+about: 某个功能失效，或特定浏览器无法使用，或其他预期之外的问题
+title: '[脚本名称] XX 功能失效/错误'
+labels: '问题反馈'
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**问题描述**
+简单明了地描述一下问题/BUG是什么。
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**重现步骤**
+重现问题/BUG的步骤：
+1. 到...
+2. 点击....
+3. 页面往下滑动/滚动到....
+4. 出现...问题
+5. ...
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**预期表现**
+简单明了地描述一下你想要它是啥样子的。
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**屏幕截图**
+俗话说一图胜千言。如果可行的话，添加屏幕截图来帮助解释这个问题/BUG。
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**电脑PC (请补充以下信息):**
+ - 操作系统: [如 Windows10]
+ - 浏览器： [如 Chrome, FireFox, Edge]
+ - 版本： [如 97.0.4692.99]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+**附加信息**
+如果还有任何你觉得有用的信息，都可以写在这里。
