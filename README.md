@@ -8,11 +8,9 @@
 
 ## 有什么用/能干什么
 
-太长不看版：**脚本帮你干页面没提供，但你想干的事**。最常用的好像就是签到......
+油猴是浏览器的插件，脚本算是油猴的插件。脚本可以帮你干页面没提供、但你需要的功能。常用的有自动签到......
 
-太长不看版：**油猴是浏览器的插件，脚本算是油猴的插件**。
-
-<details><summary>展开查看详细描述</summary>
+<details><summary>点我查看详细描述</summary>
 
 ### 油猴是什么
 
@@ -50,7 +48,7 @@
 
 ### 1. 安装油猴
 
-要使用任何脚本，先决条件是浏览器已安装油猴插件。
+_注：要使用任何脚本，先决条件是浏览器已安装油猴插件。_
 
 #### 在线安装
 
@@ -81,8 +79,10 @@ _注：不会离线安装 .crx 扩展？请参考 @XIU2 大佬的文章： [Chro
 
 | 名称 | 功能 | 链接 |
 | :---- | :---- | :----: |
-| [<img src="https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/hide_pictures_on_page.jpg" width="16px" height="16px" /> 一键隐藏图片](https://greasyfork.org/scripts/420682) | 一键隐藏网页所有图片，安全摸鱼... | [安装](https://greasyfork.org/scripts/420682/code/hide_pictures_on_page.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/hide_pictures_on_page.user.js) |
-| [<img src="https://cdn.jsdelivr.net/gh/sdokio/UserScript/assets/images/xinshangmeng.ico" width="16px" height="16px" /> 中烟新商盟小助手](https://greasyfork.org/scripts/439021) | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
+| ![](https://github.com/sdokio/UserScript/blob/main/assets/images/hide_pictures_on_page_16x16.jpg)&nbsp;&nbsp;&nbsp;&nbsp;[一键隐藏图片](https://greasyfork.org/scripts/420682) | 一键隐藏网页所有图片，安全摸鱼... | [安装](https://greasyfork.org/scripts/420682/code/hide_pictures_on_page.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/hide_pictures_on_page.user.js) |
+| ![](https://github.com/sdokio/UserScript/blob/main/assets/images/xinshangmeng_helper_16x16.ico)&nbsp;&nbsp;&nbsp;&nbsp;[中烟新商盟小助手](https://greasyfork.org/scripts/439021) | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
+
+| ![](https://github.com/sdokio/UserScript/blob/main/assets/images/base64_encode_decode_16x16.png)&nbsp;&nbsp;&nbsp;&nbsp;[Base64加解密](https://greasyfork.org/scripts/439021) | 选中后点击右键菜单即可快速替换加解密文本 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
 
 _注：使用 `备用安装` 的脚本可能存在24小时以内的更新延迟_
 
