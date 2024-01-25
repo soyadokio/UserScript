@@ -81,7 +81,6 @@ _注：不会离线安装 .crx 扩展？请参考 @XIU2 大佬的文章： [Chro
 | :---- | :---- | :----: |
 | ![](https://github.com/sdokio/UserScript/blob/main/assets/images/hide_pictures_on_page_16x16.jpg)&nbsp;&nbsp;&nbsp;&nbsp;[一键隐藏图片](https://greasyfork.org/scripts/420682) | 一键隐藏网页所有图片，安全摸鱼... | [安装](https://greasyfork.org/scripts/420682/code/hide_pictures_on_page.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/hide_pictures_on_page.user.js) |
 | ![](https://github.com/sdokio/UserScript/blob/main/assets/images/xinshangmeng_helper_16x16.ico)&nbsp;&nbsp;&nbsp;&nbsp;[中烟新商盟小助手](https://greasyfork.org/scripts/439021) | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
-
 | ![](https://github.com/sdokio/UserScript/blob/main/assets/images/base64_encode_decode_16x16.png)&nbsp;&nbsp;&nbsp;&nbsp;[Base64加解密](https://greasyfork.org/scripts/439021) | 选中后点击右键菜单即可快速替换加解密文本 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
 
 _注：使用 `备用安装` 的脚本可能存在24小时以内的更新延迟_
