@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Base64 Helper
+// @name         Base64小助手
 // @namespace    https://github.com/soyadokio/UserScript
 // @version      20250109
-// @description  Show atob and btoa in an iframe next to selected text and display results
+// @description  选中文本后自动弹窗可编码/解码Base64
 // @author       SoyaDokio
 // @match        *://*/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=v2ex.com
