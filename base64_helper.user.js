@@ -4,6 +4,7 @@
 // @version      20250109
 // @description  选中文本后自动弹窗可编码/解码Base64
 // @author       SoyaDokio
+// @license      MIT
 // @match        *://*/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=v2ex.com
 // @grant        none
