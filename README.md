@@ -1,9 +1,9 @@
 # SoyaDokio自用油猴脚本
 
 
-[![GitHub license](https://img.shields.io/github/license/sdokio/UserScript.svg?style=flat-square&color=4285dd&logo=github)](https://github.com/XIU2/UserScript/)
+[![GitHub license](https://img.shields.io/github/license/soyadokio/UserScript.svg?style=flat-square&color=4285dd&logo=github)](https://github.com/XIU2/UserScript/)
 [![GreasyFork](https://img.shields.io/static/v1?label=%20&message=GreasyFork&style=flat-square&labelColor=555555&color=4285dd&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpmMWVlZDE4NS1iMTU5LTM5NGUtYjZhNS1mNWYzMWUyNGNlY2UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUZCRThFRjg3Q0REMTFFQ0FCNjJEODgyNEFGQkI5NTMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUZCRThFRjc3Q0REMTFFQ0FCNjJEODgyNEFGQkI5NTMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmYxZWVkMTg1LWIxNTktMzk0ZS1iNmE1LWY1ZjMxZTI0Y2VjZSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpmMWVlZDE4NS1iMTU5LTM5NGUtYjZhNS1mNWYzMWUyNGNlY2UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4jVydKAAAABlBMVEX09PT///+farO/AAAAAnRSTlP/AOW3MEoAAAA/SURBVHjadI9RCgAwCEL1/pfe5hqYND9CHwUJbqEkb1kEyrZzPJ28aXc3MgmDBFBuYCDAl+TjiCpjuV5/CTAAKsgAUaugSHsAAAAASUVORK5CYII=)](https://greasyfork.org/users/394248)
-[![jsDelivr](https://data.jsdelivr.com/v1/package/gh/sdokio/UserScript/badge)](https://www.jsdelivr.com/package/gh/sdokio/UserScript)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/gh/soyadokio/UserScript/badge)](https://www.jsdelivr.com/package/gh/soyadokio/UserScript)
 
 
 ## 有什么用/能干什么
@@ -79,9 +79,9 @@ _注：不会离线安装 .crx 扩展？请参考 @XIU2 大佬的文章： [Chro
 
 | 名称 | 功能 | 链接 |
 | :---- | :---- | :----: |
-| ![](https://github.com/sdokio/UserScript/blob/main/assets/images/hide_pictures_on_page_16x16.jpg)&nbsp;&nbsp;&nbsp;&nbsp;[一键隐藏图片](https://greasyfork.org/scripts/420682) | 一键隐藏网页所有图片，安全摸鱼... | [安装](https://greasyfork.org/scripts/420682/code/hide_pictures_on_page.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/hide_pictures_on_page.user.js) |
-| ![](https://github.com/sdokio/UserScript/blob/main/assets/images/xinshangmeng_helper_16x16.ico)&nbsp;&nbsp;&nbsp;&nbsp;[中烟新商盟小助手](https://greasyfork.org/scripts/439021) | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
-| ![](https://github.com/sdokio/UserScript/blob/main/assets/images/base64_encode_decode_16x16.png)&nbsp;&nbsp;&nbsp;&nbsp;[Base64加解密](https://greasyfork.org/scripts/439021) | 选中后点击右键菜单即可快速替换加解密文本 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/sdokio/UserScript/xinshangmeng_helper.user.js) |
+| ![](https://github.com/soyadokio/UserScript/blob/main/assets/images/hide_pictures_on_page_16x16.jpg)&nbsp;&nbsp;&nbsp;&nbsp;[一键隐藏图片](https://greasyfork.org/scripts/420682) | 一键隐藏网页所有图片，安全摸鱼... | [安装](https://greasyfork.org/scripts/420682/code/hide_pictures_on_page.user.js) \| [备用](https://cdn.jsdelivr.net/gh/soyadokio/UserScript/hide_pictures_on_page.user.js) |
+| ![](https://github.com/soyadokio/UserScript/blob/main/assets/images/xinshangmeng_helper_16x16.ico)&nbsp;&nbsp;&nbsp;&nbsp;[中烟新商盟小助手](https://greasyfork.org/scripts/439021) | 一键全订1.5倍可用量（限收收藏）、一键全删订购量为0商品 | [安装](https://greasyfork.org/scripts/439021/code/xinshangmeng_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/soyadokio/UserScript/xinshangmeng_helper.user.js) |
+| ![](https://github.com/soyadokio/UserScript/blob/main/assets/images/base64_encode_decode_16x16.png)&nbsp;&nbsp;&nbsp;&nbsp;[Base64小助手](https://greasyfork.org/scripts/523292) | 选中文本后自动弹窗可编码/解码Base64 | [安装](https://greasyfork.org/scripts/523292/code/base64_helper.user.js) \| [备用](https://cdn.jsdelivr.net/gh/soyadokio/UserScript/base64_helper.user.js) |
 
 _注：使用 `备用安装` 的脚本可能存在24小时以内的更新延迟_
 
@@ -92,4 +92,4 @@ The MIT License.
 
 所有脚本仅供学习交流，请勿用于商用等其他用途。
 
-脚本所有权归 SoyaDokio(sdokio) 所有。
+脚本所有权归 SoyaDokio(soyadokio) 所有。
